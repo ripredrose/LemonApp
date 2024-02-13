@@ -32,19 +32,17 @@ const Highlight = () => {
         <section className='cards'>
           {
             list.map((list)=>{
-              return <>
-                <article className='card'>
-                <img src={'/assets/'+list.name+".jpg"} alt={list.name}  className='card-image'></img>
-                <div className='card-spacing'>
-                  <div className='flex-between'>
-                    <h6 className='card-text'>{list.title}</h6>
-                    <p className='section-categories cash-text'>$ {list.price}</p>
-                  </div>
-                  <p className='highlight-text'>{list.descrtiption}</p>
-                  <p className='section-categories'>Order a fast delivery &#9855;</p>
-                </div>
-              </article>
-              </>
+              return <article className='card' key={list.name}>
+                      <img src={'/assets/'+list.name+".jpg"} alt={list.name}  className='card-image'></img>
+                      <div className='card-spacing'>
+                        <div className='flex-between'>
+                          <h6 className='card-text'>{list.title}</h6>
+                          <p className='section-categories cash-text'>$ {list.price}</p>
+                        </div>
+                        <p className='highlight-text'>{list.descrtiption}</p>
+                        <p className='section-categories'>Order a fast delivery &#9855;</p>
+                      </div>
+                  </article>
             })
           }
         </section>

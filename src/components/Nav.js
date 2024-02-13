@@ -1,21 +1,20 @@
 import React from 'react'
 
-const Nav = () => {
+const Nav = (props) => {
   //const menu_list = ["Home","About","Menu","Reservations","Order Online","sign-in"];
+  const style = props.props==="header"?"card-title":"footer-link"
   return (
-    <nav className='header-nav'>
-      <ul className="page-links ">
-        {/* {menu_list.map((name)=>{
+     /* {menu_list.map((name)=>{
           return  <li><a href="/"+{name} className='card-title'>li</a></li>
-        })} */}
-        <li><a href='/Home' className='card-title'>Home</a></li>
-        <li><a href='/About' className='card-title'>About</a></li>
-        <li><a href='/Menu' className='card-title'>Menu</a></li>
-        <li><a href='/Reservations' className='card-title'>Reservations</a></li>
-        <li><a href='/Order' className='card-title'>Order Online</a></li>
-        <li><a href='/sign-in' className='card-title'>Login</a></li>
-      </ul>
-    </nav>
+        })} */
+        <>
+        <li><a href='/Home' className={style}>Home</a></li>
+        <li><a href='/About' className={style}>About</a></li>
+        <li><a href='/Menu' className={style}>Menu</a></li>
+        <li><a href='/Reservations' className={style}>Reservations</a></li>
+        <li><a href='/Order' className={style}>Order Online</a></li>
+        <li><a href='/sign-in' className={style}>Login</a></li>
+        </>
   )
 }
 
